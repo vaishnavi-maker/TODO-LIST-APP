@@ -1,0 +1,35 @@
+<html style="background-image:url(back.jpg);">
+   <head>
+      <title>
+         welcome to TODO-LIST-APP
+      </title>
+      <link rel="stylesheet" href="todoappcss.css">
+      <meta http-equiv = "refresh" content = "3; url = todoappui.html" />
+   </head>
+   <body class="container" onload=display_ct(); >  
+      
+      <div style="text-align: center; vertical-align:middle;line-height: 50px;  "> 
+         <h1 style="color: rgba(62, 4, 100, 0.521); margin-top: 25%;">Welcome to ToDo-List App</h1>  
+         <h1 id="currentTime" style="color: rgba(94, 9, 65, 0.521);margin-top: 5%; "></h1> 
+         <h3 id="date-time" style="color: rgba(94, 9, 65, 0.521); "></h3>
+              
+      </div> 
+      <script>
+         function display_ct() 
+         {
+            var today = new Date();
+            var date=today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+            var ampm = today.getHours( ) >= 12 ? ' PM' : ' AM';
+            var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds()+ampm;
+            document.getElementById('currentTime').innerHTML=time;
+            document.getElementById("date-time").innerHTML= today.toDateString();
+            display_c();
+         }
+         function display_c()
+         {
+            var refresh=1000; // Refresh rate in milli seconds
+            mytime=setTimeout('display_ct()',refresh)
+         }
+      </script>      
+   </body>
+</html>
