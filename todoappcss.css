@@ -1,5 +1,4 @@
 html {
-   /*background-image: url(back.jpg);*/
    background-color: cornsilk;
    background-repeat: no-repeat;
    background-size: cover;
@@ -10,7 +9,6 @@ html {
 }
 
 .todo-list-item-fall {
-   transform: translateY(12rem) rotateZ(10deg);
    opacity: 0;
 }
 
@@ -30,23 +28,41 @@ html {
 
 form {
    background-color: #FFFFFF;
-   padding: 15px;
+   padding: 20px;
    border-radius: 5px;
    display: flex;
 }
 
+.editclear {
+   /*background-color: #FFFFFF;
+   padding: 20px;
+   padding: 15px 0;*/
+   border-radius: 5px;
+   display: flex;
+   flex-grow: 1;
+   padding: 20px 0px;
+}
+/* only select text fields  */
 input[type="text"] {
    height: 30px;
    outline: 0;
    border: none;
-   font-size: 1rem;
+   font-size: 16px;
    font-family: 'Raleway', sans-serif;
    color: #595959;
    flex-grow: 1;
 }
 
 button {
-   font-size: 1.5rem;
+   font-size: 20px;
+   background-color: #FFFFFF;
+   outline: 0;
+   border: none;
+   color: #595959;
+}
+
+button .editAll {
+   font-size: 20px;
    background-color: #FFFFFF;
    outline: 0;
    border: none;
@@ -77,7 +93,7 @@ li {
    align-items: center;
    border-bottom: 1px solid lightgrey;
    padding: 15px 0;
-   font-size: 1rem;
+   font-size: 15px;
    color: white;
 }
 
@@ -94,12 +110,12 @@ img {
    width: 20px;
 }
 
-.clearAll {
+.clearAll ,.editAll {
    display: flex;
    justify-content: flex-end;
-   padding: 10px 3px;
+   /*padding: 10px 3px;*/
    cursor: pointer;
-   font-size: 0.9rem;
+   font-size: 17px;
    background-color: #8772e6;
    color: rgb(220, 235, 137);
    
